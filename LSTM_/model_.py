@@ -5,9 +5,9 @@ from keras.models import Sequential
 from sklearn.model_selection import train_test_split
 
 # Đọc dữ liệu
-dance1_df = pd.read_csv("D:/Study/NCKH/2024/Discriminating dance/dataset/lalala.txt")
-dance2_df = pd.read_csv("D:/Study/NCKH/2024/Discriminating dance/dataset/quynhalee.txt")
-dance3_df = pd.read_csv("D:/Study/NCKH/2024/Discriminating dance/dataset/vevoiem.txt")
+dance1_df = pd.read_csv("D:/Study/NCKH/2024/Discriminating dance/dataset/lalala.csv")
+dance2_df = pd.read_csv("D:/Study/NCKH/2024/Discriminating dance/dataset/quynhalee.csv")
+dance3_df = pd.read_csv("D:/Study/NCKH/2024/Discriminating dance/dataset/vevoiem.csv")
 
 X = []
 y = []
@@ -33,6 +33,8 @@ n_sample = len(dataset)
 for i in range(no_of_timesteps, n_sample):
     X.append(dataset[i - no_of_timesteps:i, :])
     y.append(2)
+
+
 
 X, y = np.array(X), np.array(y)
 print(X.shape, y.shape)

@@ -44,11 +44,11 @@ model.compile(optimizer="adam", metrics = ['accuracy'], loss = "binary_crossentr
 
 model.fit(X_train, y_train, epochs=16, batch_size=32,validation_data=(X_test, y_test))
 model.save("model_LSTM.h5")
-
-# Dự đoán trên tập kiểm tra
+# Dự đoán nhãn trên tập test
 y_pred = model.predict(X_test)
-y_pred = (y_pred > 0.5).astype(int)  # Chuyển đổi thành các dự đoán nhị phân
+y_pred = (y_pred > 0.5).astype(int)
 
-# Tính toán F1 score
+# Tính F1 score
 f1 = f1_score(y_test, y_pred)
+
 print("F1 score:", f1)

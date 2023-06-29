@@ -3,6 +3,7 @@ import pandas as pd
 
 from keras.layers import GRU, Dense, Dropout
 from keras.models import Sequential
+from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
 # Đọc dữ liệu
@@ -44,3 +45,11 @@ model.compile(optimizer="adam", metrics=['accuracy'], loss="binary_crossentropy"
 
 model.fit(X_train, y_train, epochs=16, batch_size=32, validation_data=(X_test, y_test))
 model.save("model_gru.h5")
+# Dự đoán nhãn trên tập test
+y_pred = model.predict(X_test)
+y_pred = (y_pred > 0.5).astype(int)
+
+# Tính F1 score
+f1 = f1_score(y_test, y_pred)
+
+print("F1 score:", f1)
