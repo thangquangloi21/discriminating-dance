@@ -3,8 +3,8 @@ import cv2
 import mediapipe as mp
 import pandas as pd
 
-input_folder = "D:/Study/NCKH/2024/Discriminating dance/data/"
-output_folder = "D:/Study/NCKH/2024/Discriminating dance/dataset3/"
+input_folder = "/home/loiii/Desktop/Study/NCKH/discriminating-dance/data_/Kyngucfan"
+output_folder = "/home/loiii/Desktop/Study/NCKH/discriminating-dance/DATA/Kyngucfan"
 
 # Khởi tạo thư viện mediapipe
 mpPose = mp.solutions.pose

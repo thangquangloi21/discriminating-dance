@@ -3,3 +3,4 @@ pandas
 opencv-python-headless
 tensorflow
 scikit-learn
+tiktok-scraper
