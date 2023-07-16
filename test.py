@@ -1,25 +1,22 @@
-from TikTokApi import TikTokApi
+import matplotlib.pyplot as plt
 
-# Initialize TikTokApi
-api = TikTokApi()
+# Tạo các bước trong mô hình tổng quan
+steps = [
+    "Thu thập dữ liệu",
+    "Tiền xử lý dữ liệu",
+    "Xây dựng mô hình",
+    "Huấn luyện mô hình",
+    "Đánh giá mô hình",
+    "Tinh chỉnh và tối ưu mô hình",
+    "Triển khai và sử dụng"
+]
 
-# TikTok video URL
-video_url = "https://www.tiktok.com/@tiktok/video/1234567890"
-
-# Extract video ID from the URL
-video_id = video_url.split("/video/")[1]
-
-# Get TikTok video data
-video_data = api.get_tiktok_by_id(video_id)
-
-# Get video URL
-video_download_url = video_data['itemInfo']['itemStruct']['video']['downloadAddr']
-
-# Download the video
-response = api.download_video(video_download_url, output_file='video.mp4')
-
-# Check if the video was successfully downloaded
-if response['status'] == 'success':
-    print("Video downloaded successfully!")
-else:
-    print("Failed to download the video.")
+# Tạo biểu đồ sơ đồ khái quát
+plt.figure(figsize=(8, 5))
+plt.bar(steps, range(len(steps)), color='lightblue')
+plt.xlabel('Bước trong quá trình xây dựng mô hình')
+plt.ylabel('Thứ tự bước')
+plt.title('Mô hình tổng quan về nhận dạng điệu nhảy')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
