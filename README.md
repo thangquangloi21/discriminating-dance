@@ -17,7 +17,8 @@ pip install -r setup.txt --user
 ## Steps to train the model:
 I. Data collection:
 - Collect hot trend dances on tiktok. Each trend will have 8 to 10 videos per trend
-![Mô tả ảnh](Image/1.png)
+![](Image/1.png)
+
 II. Data preprocessing:
 - After collecting data, use Make_data.py to browse through each folder to bring the movement data to a .csv file according to each trend.
 
