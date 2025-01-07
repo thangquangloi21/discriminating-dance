@@ -34,13 +34,27 @@ III. Model training:
  
 - Then run each model to train
 Model RNN
+
+![](Image/3.png)
+
 Model LSTM
+
+![](Image/4.png)
+
 Model GRU
+
+![](Image/5.png)
+
 - And must change the label name according to the labels configured in the train model section
 
 This is the code in the models
 
+![](Image/6.png)
+
 This is the code in inference.py
+
+![](Image/7.png)
+
 IV. Evaluate model	
 
 ![](Image/img.png)
@@ -52,4 +66,8 @@ F1 score	0.9542	0.9715	0.9621
 
 V. Deployment testing
 - Use the inference.py file to use the desired model, change the model and cap variables according to the model you want to deploy and the video path you want to use.
+
+  ![](Image/8.png)
+  
 - 1 example of using RNN model to detect trend
+  ![](Image/9.png)
