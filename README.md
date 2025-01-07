@@ -14,6 +14,6 @@ install setup.txt
 pip install -r setup.txt --user
  ```
 
-##Steps to train the model:
+## Steps to train the model:
 I, Collect data:
 - Collect hot trend dances on tiktok. Each trend will have from 8 to 10 videos per trend
