@@ -15,5 +15,31 @@ pip install -r setup.txt --user
  ```
 
 ## Steps to train the model:
-I, Collect data:
-- Collect hot trend dances on tiktok. Each trend will have from 8 to 10 videos per trend
+I. Data collection:
+- Collect hot trend dances on tiktok. Each trend will have 8 to 10 videos per trend
+II. Data preprocessing:
+-  After collecting data, use Make_data.py to browse through each folder to bring the movement data to a .csv file according to each trend.
+III. Model training:
+- Based on the available model, we see that there are 3 main models:
+• RNN (Recurrent neural network)
+• LSTM (Long Short-Term Memory)
+• GRU (Gated Recurrent Unit)
+- replace the inp_dance variables to point to the folder containing the processed video data
+- Then run each model to train
+Model RNN
+Model LSTM
+Model GRU
+- And must change the label name according to the labels configured in the train model section
+
+This is the code in the models
+
+This is the code in inference.py
+IV. Evaluate model	
+Model/Value	RNN	LSTM	GRU
+accuracy	0.9623	0.9738	0.9694
+loss	0.1409	0.0718	0.0852
+F1 score	0.9542	0.9715	0.9621
+
+V. Deployment testing
+- Use the inference.py file to use the desired model, change the model and cap variables according to the model you want to deploy and the video path you want to use.
+- 1 example of using RNN model to detect trend
